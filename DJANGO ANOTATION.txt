@@ -1,0 +1,61 @@
+INSTALAR EXTENSAO SQLITE VIEWER	=	BANCO DE DADOS.
+METODOS MÁGICOS		=	PESQUISAR
+
+
+					FLUXOGRAMA.
+-	django-admin startproject nome_do_projeto		=		INICIAR UM PROJETO.
+-	django-admin startapp app_name					=		CRIAR APP
+-	CD nome_da_pasta								=		TRABALHAR DENTRO DA PASTA DO PROJETO.
+-	python manage.py runserver						=		RODAR O SERVIDOR
+-	Criar links urls.py									=		path("caminho/", views.home, name="home").)		/	facebook.com/groups 	→		 groups = caminho.
+-	Em urls.py IMPORTAR VIEWS DO APP				=		from app_name import views			=		função HTTP
+-	Criar função em views.py							=		Criar função "O QUE ACONTECE APÓS ENTRAR NO LINK?"
+-	Criar pasta "templates" na pasta do APP			=		Criar frontend.
+-	Adicionar o app criado em settings.py				=		Adicionar APP na lista de execuções no site.
+
+
+
+
+
+
+
+DJANGO 		=		 FRAMEWORK PARA DESENVOLVIMENTO WEB.
+DJANGO TREE	=	WEBSITE REQUISIÇÃO HTTP → URL NÃO EXISTE = ERRO / URL EXISTE = REDIRECIONAMENTO  → SOLICITA UMA RESPOSTA HTTP = TEMPLATES (html, forms, css, js,models).
+
+models.py		=		Banco de dados.
+
+DEBUG			=		TRUE/em desenvolvimento	FALSE/em funcionamento
+
+DEPLOY			=		SUBIR UM SITE/APP.
+
+ENCERRAR SERVIDOR		=		CLICAR NO TERMINAL, SEGURAR CTRL E APERTAR C.
+
+include			=		Link me inclui em um APP
+
+------------------------------------
+
+<form action="" method="POST"> {% csrf_token %}	=		Local onde serão redirecionados as informações.
+{% csrf_token %}	=	Função que garante que o formulário seja real.
+
+<form action ="{% url " " %}" method="post"              =		URL QUE ARMAZENARÁ OS DADOS.
+
+In views.py
+	def APPname (request):
+		if request.method == "GET":
+			return render (resquest, "APPname")
+		elif request.method == "POST":
+			print(request.META)						=	.META = TODAS AS INFORMAÇÕES DO USUÁRIO.
+			print(request.POST)						=	.POST = Informações fornecidas pelo usuário nos INPUT's.
+			return HttpResponse ("")
+
+		elif request.method == "POST":				=	.POST .GET = pegar informações dispostas no FORMs e armazenar os dados.
+			nome = request.POST.get ("nome")
+			curso = request.POST.get ("curso")
+
+GET / POST		=		GET = RECEBER	/	POST = POSTAR
+
+------------------------------------	
+
+python3 manage.py createsuperuser		=		Criar usuário ADMIN para ter acesso aos MODELS/área administrativa.
+
+
